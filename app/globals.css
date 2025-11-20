@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --glass-effect: rgba(255, 255, 255, 0.6);
+  --glass-border: #ffffffe1;
 }
 
 @theme inline {
@@ -23,4 +25,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerHover{
+  @apply hover:scale-105 transition-transform duration-200;
+  text-shadow: 0 1px 0 var(--glass-border);    
+  color: rgba(0, 0, 0, 0.596);   
+}
+
+.welcomeH1{
+    width: 35%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 630%;
+    text-shadow: 0 -1px 0 var(--glass-border), 0 2px 0 var(--glass-border);    
+    color: rgba(0, 0, 0, 0.596);   
 }
